@@ -7,7 +7,7 @@ function Header() {
   const router = useRouter();
   return(
     <div className="h-16 fixed left-0 text-white top-0 bg-neutral-800 w-screen flex items-center gap-20 px-8">
-      <div className="w-48 h-10 bg-contain bg-no-repeat bg-[url(https://w7.pngwing.com/pngs/853/906/png-transparent-pornhub-hd-logo.png)]"></div>
+      <div className="w-48 h-10 bg-contain bg-no-repeat bg-[url(https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Pornhub-logo.svg/2560px-Pornhub-logo.svg.png)]"></div>
       <button className="text-white text-xl font-semibold flex flex-row gap-2 " onClick={() => router.push("/")}>Төрөл
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mt-px w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
