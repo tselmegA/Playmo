@@ -8,7 +8,7 @@ import { useState } from "react";
     const [opacity, setOpacity] = useState(false);
     const changeOpacity = () => {
       if (typeof window !== "undefined") {
-        if (window.scrollY >= 90) setOpacity(true);
+        if (window.scrollY >= 8) setOpacity(true);
         else setOpacity(false);
       }
     };
@@ -17,8 +17,8 @@ import { useState } from "react";
   };
   const router = useRouter();
   return(
-    <div className= {opacity ? "h-16 fixed left-0 text-white top-0 bg-neutral-800 w-screen flex items-center gap-20 px-8 duration-700" : "h-16 fixed left-0 text-white top-0 w-screen flex items-center gap-20 px-8 duration-700"}>
-      <div className="w-48 h-10 bg-contain bg-no-repeat bg-[url(https://play-lh.googleusercontent.com/yOFAv8nplAvlJyyL0mYwwFYIxaGIBRUCI1_mg1mS_bC_P7SpWpvdmoCBcF3odwiMFkM)]"></div>
+    <div className= {opacity ? "h-16 fixed z-50 left-0 text-white top-0 bg-[#2B2B2B] w-screen flex items-center gap-20 px-8 duration-700" : " h-16 fixed left-0 text-white top-0 w-screen z-50 flex items-center gap-20 px-8 duration-700"}>
+      <div className="w-64 h-10 bg-contain bg-no-repeat bg-[url('/Logo.png')]"></div>
       <button className="text-white text-xl font-semibold flex flex-row gap-2 " onClick={() => router.push("/")}>Төрөл
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="mt-px w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
