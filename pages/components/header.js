@@ -1,14 +1,15 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Header() {
+export default function Header({ hide = true }) {
   const router = useRouter();
   const [opacity, setOpacity] = useState(false);
   const [search, setSearch] = useState(false);
   const [login, setLogin] = useState(false);
+
   const haih = () => {
     if (search == false) {
       setSearch(true);
@@ -32,6 +33,11 @@ export default function Header() {
   if (typeof window !== "undefined") {
     window.addEventListener("scroll", changeOpacity);
   }
+  useEffect(() => {
+    if (!hide) {
+      setOpacity(true);
+    }
+  }, []);
   return (
     <div
       className={
