@@ -32,9 +32,9 @@ export default function Home() {
             <a href="">Бүртгүүлэх</a>
           </span>
         </div>
-        <button className="w-[48vh] h-[6vh] rounded flex justify-center items-center font-medium text-lg  bg-[#3c5997] ">
-          Facebook нэвтрэх
-        </button>
+        <span className="w-[48vh] h-[6vh] rounded flex justify-center items-center font-medium text-lg  bg-[#3c5997] ">
+          <a href="https://www.facebook.com/login">Facebook нэвтрэх</a>
+        </span>
       </div>
     </div>
   );

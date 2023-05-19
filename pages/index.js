@@ -4,6 +4,11 @@ import { userAgentFromString } from "next/server";
 import Header from "./components/header";
 import { useRouter } from "next/router";
 import Footer from "./components/footer";
+import ScrollOne from "./components/scrollOne";
+import ScrollTwo from "./components/scrollTwo";
+import ScrollThree from "./components/scrollThree";
+import ScrollFour from "./components/scrollFour";
+import ScrollSpecial from "./components/scrollSpecial";
 
 export default function Home() {
   const router = useRouter();
@@ -36,6 +41,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <ScrollOne />
+      <ScrollTwo />
+      <ScrollThree />
+      <ScrollSpecial />
+      <ScrollFour />
       <Footer />
     </div>
   );
