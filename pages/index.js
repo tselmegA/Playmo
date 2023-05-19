@@ -7,6 +7,13 @@ import ScrollOne from "./components/scrollOne";
 import ScrollTwo from "./components/scrollTwo";
 import ScrollThree from "./components/scrollThree";
 import ScrollSpecial from "./components/scrollSpecial";
+import ScrollFour from "./components/scrollFour";
+import ScrollFive from "./components/scrollFive";
+import ScrollSix from "./components/scrollSix";
+import ScrollSeven from "./components/scrollSeven";
+import ScrollEight from "./components/scrollEight";
+import ScrollNine from "./components/scrollNine";
+import Footer from "./components/footer";
 
 export default function Home() {
   const router = useRouter();
@@ -44,8 +51,15 @@ export default function Home() {
         <ScrollTwo />
         <ScrollThree />
         <ScrollSpecial />
+        <ScrollFour />
+        <ScrollFive />
+        <ScrollSix />
+        <ScrollSeven />
+        <ScrollEight />
+        <ScrollNine />
+        <Footer />
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

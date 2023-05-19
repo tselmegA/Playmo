@@ -6,9 +6,9 @@ import { useState } from "react";
 
 export default function Header({ hide = true }) {
   const router = useRouter();
-  const [opacity, setOpacity] = useState(false);
   const [search, setSearch] = useState(false);
   const [login, setLogin] = useState(false);
+  const [turul, setTurul] = useState(false)
 
   const haih = () => {
     if (search == false) {
@@ -24,37 +24,58 @@ export default function Header({ hide = true }) {
       setLogin(false);
     }
   };
-  const changeOpacity = () => {
-    if (typeof window !== "undefined") {
-      if (window.scrollY >= 8) setOpacity(true);
-      else setOpacity(false);
-    }
-  };
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", changeOpacity);
+  const clickTurul = () => {
+    if(turul == false)
+      setTurul(true)
+    else setTurul(false)
   }
-  useEffect(() => {
-    if (!hide) {
-      setOpacity(true);
-    }
-  }, []);
   return (
     <div
-      className={
-        opacity
-          ? "h-16 fixed z-50 left-0 text-white top-0 bg-[#2B2B2B] w-screen flex items-center gap-20 px-8 duration-700"
-          : " h-16 fixed left-0 text-white top-0 w-screen z-50 flex items-center gap-20 px-8 duration-700"
-      }
+      className="h-16 fixed z-50 left-0 text-white top-0 bg-[#2B2B2B] w-screen flex items-center gap-20 px-8 duration-700"
     >
       <button className="w-64 h-10 bg-contain bg-no-repeat bg-[url('/Logo.png')]"></button>
-      <button
-        className="text-white text-lg font-semibold flex flex-row gap-2 "
-        onClick={() => router.push("/")}
-      >
-        Төрөл
-        <TurulIcon />
-      </button>
-
+        <button
+          className="text-white text-lg font-semibold flex items-center gap-2"
+          onClick={clickTurul}
+        >
+          Төрөл
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth={1.5}
+            stroke="currentColor"
+            className="mt-px w-6 h-6"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+            />
+          </svg>
+        </button>
+      <div className={ turul ? "w-80 h-[50vh] bg-[#2B2B2B] border-[1px] border-white rounded-sm relative right-40 top-64 cursor-pointer overflow-y-scroll" : "w-80 h-[50vh] bg-[#2B2B2B] border-[1px] border-white rounded-sm relative right-40 top-64 cursor-pointer overflow-y-scroll invisible"}>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+          <p className="m-6">UNALT</p>
+        </div>
       <div className="w-full flex justify-end  items-center">
         <input
           className={
@@ -87,25 +108,6 @@ export default function Header({ hide = true }) {
     </div>
   );
 }
-
-const TurulIcon = () => {
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 24 24"
-      strokeWidth={1.5}
-      stroke="currentColor"
-      className="mt-px w-6 h-6"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-      />
-    </svg>
-  );
-};
 
 const SearchIcon = () => {
   return (
@@ -159,3 +161,17 @@ const NevtrehIcon = () => {
     </svg>
   );
 };
+// <svg
+    //   xmlns="http://www.w3.org/2000/svg"
+    //   fill="none"
+    //   viewBox="0 0 24 24"
+    //   strokeWidth={1.5}
+    //   stroke="currentColor"
+    //   className="mt-px w-6 h-6"
+    // >
+    //   <path
+    //     strokeLinecap="round"
+    //     strokeLinejoin="round"
+    //     d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+    //   />
+    // </svg>

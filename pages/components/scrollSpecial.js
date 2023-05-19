@@ -33,7 +33,7 @@ export default function ScrollSpecial() {
         ))}
       </div>
       <div class="">Шинээр нэмэгдсэн кинонуудыг түрээслэн үзээрэй.</div>
-      <div class="text-green-500">Яагаад тусдаа төлбөр гэж?</div>
+      <div class="text-green-500 h-12">Яагаад тусдаа төлбөр гэж?</div>
     </div>
   );
 }
