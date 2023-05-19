@@ -2,8 +2,10 @@ import Head from "next/head";
 import Image from "next/image";
 import { userAgentFromString } from "next/server";
 import Header from "./components/header";
+import { useRouter } from "next/router";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <div className="w-full h-screen bg-[#161616] flex justify-center items-center ">
       <Header hide={false} />
@@ -29,7 +31,7 @@ export default function Home() {
             <a href="https://www.playmo.mn/password/email">Нууц үг сэргээх</a>
           </span>
           <span className="text-[#29b358] flex font-extralight">
-            <a href="">Бүртгүүлэх</a>
+            <a href="http://localhost:3000/register">Бүртгүүлэх</a>
           </span>
         </div>
         <span className="w-[48vh] h-[6vh] rounded flex justify-center items-center font-medium text-lg  bg-[#3c5997] ">

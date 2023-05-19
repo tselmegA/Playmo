@@ -18,7 +18,10 @@ export default function Home() {
           >
             Нэвтрэх
           </button>
-          <button className="w-[50vh] h-[6vh] rounded flex justify-center text-[#29b75a] items-center font-medium border border-[#29b75a] text-lg mt-5 hover:bg-[#272626] bg-[#2B2B2B]">
+          <button
+            onClick={() => router.push("/register")}
+            className="w-[50vh] h-[6vh] rounded flex justify-center text-[#29b75a] items-center font-medium border border-[#29b75a] text-lg mt-5 hover:bg-[#272626] bg-[#2B2B2B]"
+          >
             Бүртгүүлэх
           </button>
         </div>
