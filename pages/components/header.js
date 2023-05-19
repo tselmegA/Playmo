@@ -46,7 +46,10 @@ export default function Header({ hide = true }) {
           : " h-16 fixed left-0 text-white top-0 w-screen z-50 flex items-center gap-20 px-8 duration-700"
       }
     >
-      <button className="w-64 h-10 bg-contain bg-no-repeat bg-[url('/Logo.png')]"></button>
+      <button
+        onClick={() => router.push("/")}
+        className="w-64 h-10 bg-contain bg-no-repeat bg-[url('/Logo.png')]"
+      ></button>
       <button
         className="text-white text-lg font-semibold flex flex-row gap-2 "
         onClick={() => router.push("/")}
@@ -72,7 +75,7 @@ export default function Header({ hide = true }) {
             <SumIcon />
           </button>
           <button
-            onClick={() => router.push("/login")}
+            onClick={() => router.push("/reallogin")}
             className={
               login
                 ? "absolute right-0 top-12 flex  justify-center border items-center rounded p-2 w-[140px] h-[55px] bg-[#353535] mr-5 gap-3 border-opacity-10"

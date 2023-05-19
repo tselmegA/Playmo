@@ -3,19 +3,20 @@ import Image from "next/image";
 import { userAgentFromString } from "next/server";
 import Header from "./components/header";
 import { useRouter } from "next/router";
+import Footer from "./components/footer";
 
 export default function Home() {
   const router = useRouter();
   return (
     <div className="w-screen h-[200vh]  bg-black  items-start text-white ">
       <Header />
-      <div className="  w-screen h-[66vh] bg-cover flex bg-center bg-[url(https://api.playmo.mn/storage/images/media/banner/fa2XZtqZmgovgw9ppaLD7A17FUvvJFCNRzf5r5LK.jpg)]">
+      <div className="  w-screen h-[66vh] bg-cover flex bg-center bg-[url(https://api.playmo.mn/storage/images/media/banner/EWY3si0EG2RtBV1OBlcNlq3ug6prmAOghE1gtgjD.jpg)]">
         <div className="absolute z-0 left-0 top-0 w-1/3 h-[66vh] bg-gradient-to-r from-black to-transparent"></div>
         <div className="w-screen z-0 h-[20vh] bg-gradient-to-b	absolute top-0  from-black to-transparent"></div>
         <div className="flex  z-40 justify-center flex-col  items-center  ">
           <img
             className="w-full"
-            src="https://api.playmo.mn/storage/images/media/logo/md/fudaddq3LwLjgpRI90bn1H0aeCBX7WF0ciW8DDz8.png"
+            src="https://api.playmo.mn/storage/images/media/logo/md/kbvp84O6VL3nrtwzTRuIQa5wPKfIvELEGVtaRVY9.png"
           />
           <div className="flex gap-10  items-center  ">
             <button
@@ -35,6 +36,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

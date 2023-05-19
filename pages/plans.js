@@ -46,7 +46,7 @@ export default function Home() {
               Багцын эрхүүдийг харахын тулд нэвтрэх шаардлагатай.
             </p>
           </span>
-          <a href="http://localhost:3000/login" target="_blank">
+          <a href="http://localhost:3000/login">
             <button className="flex justify-center pt-3 pb-3 pl-5 pr-5 border rounded-sm bg-[#29b75a] border-none">
               <p class="text-[#f5f5f1] text-lg font-semibold">Нэвтрэх</p>
             </button>
