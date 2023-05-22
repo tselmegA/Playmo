@@ -8,10 +8,22 @@ import ScrollOne from "./components/scrollOne";
 import ScrollTwo from "./components/scrollTwo";
 import ScrollThree from "./components/scrollThree";
 import ScrollFour from "./components/scrollFour";
+import ScrollFive from "./components/scrollFive";
+import ScrollSix from "./components/scrollSix";
+import ScrollSeven from "./components/scrollSeven";
+import ScrollEight from "./components/scrollEight";
+import ScrollNine from "./components/scrollNine";
+import { PopularMovies } from "./components/popularMovies";
 import ScrollSpecial from "./components/scrollSpecial";
+import { useState } from "react";
 
 export default function Home() {
+  const [list, setList] = useState(false);
   const router = useRouter();
+  const clickList = () => {
+    if (list == false) setList(true);
+    else setList(false);
+  };
   return (
     <div className="w-screen h-[200vh]  bg-black  items-start text-white ">
       <Header />
@@ -23,29 +35,54 @@ export default function Home() {
             className="w-full"
             src="https://api.playmo.mn/storage/images/media/logo/md/zbnPZVqLD5leUFhDeFiFTtdtz0atf9f1PDPaZazC.png"
           />
-          <div className="flex gap-10  items-center  ">
+          <div className="flex justify-between items-center  ">
             <button
               onClick={() => router.push("/login")}
               className="w-[16vh] h-[6vh] rounded flex justify-center items-center font-medium text-lg  bg-[#29b75a]"
             >
               Шууд үзэх
             </button>
-            <button className=" w-[12vh] h-[8vh] flex flex-col items-center justify-center hover:bg-[#ffffff] hover:bg-opacity-10">
+            <button
+              onClick={clickList}
+              className=" w-[12vh] h-[8vh] flex flex-col items-center ml-12 justify-center hover:bg-[#ffffff] hover:bg-opacity-10"
+            >
               <ListIcon />
               <div className="text-xs">Жагсаалт</div>
             </button>
-            <button className=" w-[10vh] h-[8vh] flex flex-col justify-center items-center hover:bg-[#ffffff] hover:bg-opacity-10 ">
-              <InfoIcon />
-              <div className="text-xs ">Тойм</div>
+            <button className=" w-[10vh] h-[8vh] flex flex-col ml-6 mt-px justify-center items-center hover:bg-[#ffffff] hover:bg-opacity-10 ">
+              <a href="https://www.playmo.mn/titles/43785973">
+                <InfoIcon />
+                <div className="text-xs ">Тойм</div>
+              </a>
             </button>
+            <div
+              className={
+                list
+                  ? "w-[16vh] h-[12vh] bg-[#353535] border-[1px] border-[#969084] rounded-sm relative right-52 top-24 cursor-pointer overflow-y-scroll"
+                  : "w-[16vh] h-[12vh] bg-[#2B2B2B] border-[1px] border-white rounded-sm relative right-52 top-64 cursor-pointer overflow-y-scroll invisible"
+              }
+            >
+              <button className="w-full h-12 flex justify-start items-center pl-4 hover:bg-[#2b2b2b]">
+                Сонирхсон
+              </button>
+              <button className="w-full h-12 flex justify-start items-center pl-4 hover:bg-[#2b2b2b]">
+                Үзсэн
+              </button>
+            </div>
           </div>
         </div>
       </div>
+      <PopularMovies />
       <ScrollOne />
       <ScrollTwo />
       <ScrollThree />
       <ScrollSpecial />
       <ScrollFour />
+      <ScrollFive />
+      <ScrollSix />
+      <ScrollSeven />
+      <ScrollEight />
+      <ScrollNine />
       <Footer />
     </div>
   );

@@ -34,9 +34,11 @@ export default function Home() {
             <a href="http://localhost:3000/register">Бүртгүүлэх</a>
           </span>
         </div>
-        <span className="w-[48vh] h-[6vh] rounded flex justify-center items-center font-medium text-lg  bg-[#3c5997] ">
-          <a href="https://www.facebook.com/login">Facebook нэвтрэх</a>
-        </span>
+        <a href="https://www.facebook.com/login">
+          <div className="w-[48vh] h-[6vh] rounded flex justify-center items-center font-medium text-lg  bg-[#3c5997] ">
+            Facebook нэвтрэх
+          </div>
+        </a>
       </div>
     </div>
   );
